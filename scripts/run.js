@@ -19,9 +19,10 @@
   var options = { html: {}, css: {}, js: {} };
 
   // This stuff does all the magic.
-  var html_beautify = require(path.join(__dirname, "beautify-html.js")).html_beautify;
-  var js_beautify = require(path.join(__dirname, "beautify.js")).js_beautify;
-  var css_beautify = require(path.join(__dirname, "beautify-css.js")).css_beautify;
+  var beautify = require("js-beautify");
+  var html_beautify = beautify.html_beautify;
+  var js_beautify = beautify.js_beautify;
+  var css_beautify = beautify.css_beautify;
 
   // Some handy utility functions.
   function isTrue(value) {
